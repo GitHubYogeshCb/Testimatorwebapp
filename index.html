@@ -35,6 +35,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
+    <!-- Favicon using Emoji (Immediate Solution) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    
+    <!-- Alternative: Purple gradient favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238B5CF6'/%3E%3Cstop offset='100%25' style='stop-color:%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grad)' rx='20'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='white'%3E🤖%3C/text%3E%3C/svg%3E">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238B5CF6'/%3E%3Cstop offset='100%25' style='stop-color:%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grad)' rx='20'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='white'%3E🤖%3C/text%3E%3C/svg%3E">
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://api.telegram.org">
@@ -1090,22 +1099,28 @@ p {
 <body>
     <!-- Navigation Header -->
     <header>
-        <nav class="navbar">
-        <div class="nav-container">
-            <!-- Logo + Brand Name -->
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <!-- Logo Icon -->
-                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #8B5CF6, #06B6D4); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+        <nav style="background: white; border-bottom: 1px solid #E5E7EB; padding: 16px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <div style="max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <!-- Logo + Brand -->
+            <div style="display: flex; align-items: center; gap: 12px; cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                <!-- Logo with gradient background -->
+                <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #8B5CF6, #06B6D4); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);">
                     🤖
                 </div>
                 <!-- Brand Name -->
-                <span style="font-size: 24px; font-weight: 800; background: linear-gradient(135deg, #8B5CF6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                    Testimator.ai
-                </span>
+                <div style="display: flex; flex-direction: column;">
+                    <span style="font-size: 22px; font-weight: 800; background: linear-gradient(135deg, #8B5CF6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;">
+                        Testimator.ai
+                    </span>
+                    <span style="font-size: 11px; color: #6B7280; font-weight: 600; letter-spacing: 0.5px;">
+                        AI Testing Automation
+                    </span>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li><button class="hero-cta" onclick="scrollToDemo()" style="padding: 12px 24px; font-size: 16px; font-weight: 600;">Book 15-Min Demo</button></li>
-            </ul>
+            <!-- CTA Button -->
+            <a href="#demo" style="padding: 12px 28px; background: linear-gradient(135deg, #8B5CF6, #06B6D4); color: white; text-decoration: none; border-radius: 9999px; font-weight: 700; font-size: 16px; transition: all 0.3s; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4); display: inline-block;" onclick="scrollToDemo(); return false;">
+                Book Demo →
+            </a>
         </div>
         </nav>
     </header>
