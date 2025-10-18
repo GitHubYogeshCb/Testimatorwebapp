@@ -893,6 +893,17 @@ p {
     padding: 0 24px;
   }
   
+  /* Mobile Logo Adjustments */
+  .nav-container div[style*="display: flex; align-items: center; gap: 12px"] div[style*="width: 40px; height: 40px"] {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 20px !important;
+  }
+  
+  .nav-container div[style*="display: flex; align-items: center; gap: 12px"] span[style*="font-size: 24px"] {
+    font-size: 18px !important;
+  }
+  
   /* Hero Section */
   .hero {
     padding: 60px 24px;
@@ -1081,7 +1092,17 @@ p {
     <header>
         <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Testimator.ai 🤖</a>
+            <!-- Logo + Brand Name -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <!-- Logo Icon -->
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #8B5CF6, #06B6D4); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                    🤖
+                </div>
+                <!-- Brand Name -->
+                <span style="font-size: 24px; font-weight: 800; background: linear-gradient(135deg, #8B5CF6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                    Testimator.ai
+                </span>
+            </div>
             <ul class="nav-menu">
                 <li><button class="hero-cta" onclick="scrollToDemo()" style="padding: 12px 24px; font-size: 16px; font-weight: 600;">Book 15-Min Demo</button></li>
             </ul>
